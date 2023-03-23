@@ -69,7 +69,7 @@ function App() {
 
       <button onClick={changhandle}>Add It</button>
       <br />
-      <button onClick={changhandle2}>Chaeck Array in console</button>
+      <button onClick={changhandle2}>Check Array in console</button>
       <br />
       <br />
 
