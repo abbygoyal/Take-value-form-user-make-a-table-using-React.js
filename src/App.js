@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   const [inputarr, setInputarr] = useState([]);
 
-  const [inputdata, SetInputdata] = useState({ name: "", rollNo: "" });
+  const [inputdata, SetInputdata] = useState({ name: "", email: "" });
 
   function changehandle(e) {
     SetInputdata({
@@ -14,18 +14,18 @@ function App() {
     });
   }
 
-  let { name, rollNo } = inputdata;
+  let { name, email } = inputdata;
   function changhandle() {
     setInputarr([
       ...inputarr,
       {
         name,
-        rollNo,
+        email,
       },
     ]);
 
     console.log(inputdata, "input data what we Enter");
-    SetInputdata({ name: "", rollNo: "" });
+    SetInputdata({ name: "", email: "" });
   }
   let delethandle = (i) => {
     let newdataArr = [...inputarr];
@@ -61,10 +61,10 @@ function App() {
       <input
         type="text"
         autoComplete="off"
-        name="rollNo"
-        value={inputdata.rollNo}
+        name="email"
+        value={inputdata.email}
         onChange={changehandle}
-        placeholder="Roll no"
+        placeholder="Email ID"
       />
 
       <button onClick={changhandle}>Add It</button>
@@ -76,7 +76,7 @@ function App() {
       <table border={1} width="30%" cellPadding={10}>
         <tbody>
           <tr>
-            <td>Sr.No</td>
+            <th>Sr.No</th>
             <th>Name </th>
             <th>Roll No</th>
             <th>Options</th>
@@ -91,7 +91,7 @@ function App() {
                 <tr key={ind}>
                   <td>{ind + 1}</td>
                   <td>{info.name}</td>
-                  <td>{info.rollNo}</td>
+                  <td>{info.email}</td>
                   <td>
                     <button onClick={() => delethandle(ind)}>Delete</button>
                   </td>
