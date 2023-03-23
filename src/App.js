@@ -78,7 +78,7 @@ function App() {
           <tr>
             <th>Sr.No</th>
             <th>Name </th>
-            <th>Roll No</th>
+            <th>Email ID</th>
             <th>Options</th>
           </tr>
           {inputarr.length < 1 ? (
